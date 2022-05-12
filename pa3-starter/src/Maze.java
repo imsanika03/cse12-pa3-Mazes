@@ -121,6 +121,20 @@ class Maze {
 	 */
 	public ArrayList<Square> storePath() {
 		/* Complete this method */
-		return null;
+		ArrayList<Square> solution = new ArrayList<>(); 
+		
+	
+		Square current = finish; 
+		Square prev = finish; 
+		
+		while (!current.equals(start)) {
+			solution.add(current);  
+			current = current.getPrevious(); 
+	
+		}
+		
+		solution.add(start); 
+		
+		return solution; 
 	}
 }
